@@ -38,7 +38,7 @@ async function renderMovies(input) {
 }
 
 async function searchResults(searchInput) {
-  const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
+  const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
   const movies = await response.json()
   return getMovieDetails(movies)
 }
@@ -47,7 +47,7 @@ async function getMovieDetails(allMovies) {
   //checking to see if any movies were found from search input
   if (allMovies.Response === "True") {
     const movies = allMovies.Search.map(async (movie) => {
-      const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`)
+      const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`)
       return await response.json()
     })
     return Promise.all(movies) //waiting for all promises to complete before returning
