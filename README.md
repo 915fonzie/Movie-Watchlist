@@ -1,5 +1,5 @@
-For this project, responsive design wasn't part of it so the live example is only one size, I recommend using on desktop
-live example: [https://fonzie-movie-watchlist.netlify.app](https://fonzie-movie-watchlist.netlify.app/)
+For this project, responsive design wasn't part of it so the live example is only one size, I recommend using on a desktop
+for the live example: [https://fonzie-movie-watchlist.netlify.app](https://fonzie-movie-watchlist.netlify.app/)
 ## About Scrimba
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
