@@ -5,7 +5,8 @@ let localMovies = []
 
 if (localStorage.length > 0) {
   Object.keys(localStorage).forEach((movieId) => {
-    if (localStorage.getItem(`${movieId}`)) {
+    //there can be other things in localStorage so checking for keys that start with tt since all movieId's start that way
+    if (movieId.slice(0,2) === 'tt') {
       localMovies.unshift(JSON.parse(localStorage.getItem(`${movieId}`)))
     }
   })
