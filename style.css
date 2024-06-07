@@ -1,0 +1,263 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'sans-sarif';
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 550px;
+    height: 779px;
+    box-shadow: 0 0 25px 5px grey;
+    background-color: #121212;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 208px;
+    background-image: url(images/header-background.jpeg);
+    background-color: rgba(10, 14, 17, 0.8);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: 0% 23.5%;
+    color: white;
+}
+
+header > h1 {
+    font-size: 2.674375rem;
+    font-weight: 800;
+    margin: 0;
+    cursor: default;
+}
+
+.watchlist {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+.watchlist::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.watchlist:hover::after,
+.watchlist:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+.watchlist::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.watchlist:hover::after,
+.watchlist:focus::after{
+    transform: scale(1);
+}
+
+h1, h3, p {
+    margin: 0;
+}
+
+.search-bar-container {
+    position: absolute;
+    top: 24.3%;
+    left: 8%;
+    height: 38px;
+    width: 462px;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40px 1fr 120px;
+}
+
+form > input {
+    border: none;
+    background-color: #2e2e2f;
+    color: #9ca3af;
+}
+
+form > input:focus {
+    outline: none;
+}
+
+form > button {
+    background-color: #4b4b4b;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: #FFF;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+form > button:active {
+    background-color: #3d3d3d;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #2e2e2f;
+}
+
+.no-result {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #787878;
+    margin: auto 5em;
+}
+
+.movies-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0em 2em;
+    overflow: scroll;
+    color: white;
+}
+
+.start-exploring {
+    width: 148px;
+    margin: auto;
+}
+
+.empty-watchlist {
+    margin: auto;
+    text-align: center;
+}
+
+.empty-watchlist > p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #787878;
+    margin-bottom: 1em;
+}
+
+.empty-watchlist > a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.empty-watchlist > a:hover,
+.empty-watchlist > a:focus {
+    filter: opacity(50%);
+}
+
+.movie-container:first-of-type {
+    margin-top: 3em;
+}
+
+.movie-container:last-of-type {
+    border: none;
+}
+
+.movie-container {
+    min-height: 177.8px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    margin: 1em 1em 0 1em;
+    padding-bottom: 1em;
+    gap: 1.5em;
+}
+
+.movie-container > div > p {
+    font-size: 0.875rem;
+    color: #a5a5a5;
+}
+
+.title-rating, .runtime-genre-add {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.title-rating > h3 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    
+}
+
+.title-rating > p {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 0.75rem;
+}
+
+.runtime-genre-add {
+    font-size: 0.75rem;
+    gap: 1em;
+}
+
+.runtime-genre-add > a{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.runtime-genre-add > a:hover,
+.runtime-genre-add > a:focus {
+    filter: opacity(50%);
+}
+
+
+.poster-img {
+    width: 99px;
+    height: 147.41px;
+}
+
+
