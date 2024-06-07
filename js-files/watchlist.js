@@ -3,23 +3,24 @@ import updateMoviesSection from "./helper-files/updateMoviesSection.js"
 const moviesSection = document.getElementById("movies-section")
 let localMovies = []
 
-if (localStorage.length > 0) {
   Object.keys(localStorage).forEach((movieId) => {
     //there can be other things in localStorage so checking for keys that start with tt since all movieId's start that way
     if (movieId.slice(0,2) === 'tt') {
       localMovies.unshift(JSON.parse(localStorage.getItem(`${movieId}`)))
     }
   })
-  const html = updateMoviesSection(localMovies)
-  moviesSection.innerHTML = html
-} else {
+const html = updateMoviesSection(localMovies)
+if (html === '') {
   moviesSection.innerHTML = `
         <div class="empty-watchlist"> 
             <p>Your watchlist is looking a little empty...</p>
             <a href="../index.html"><img src="/icons/add.svg"/>Let's add some movies!</a>
         </div>
     `
+} else {
+    moviesSection.innerHTML = html
 }
+
 
 document.addEventListener("click", function (e) {
   const movieId = e.target.dataset.id
