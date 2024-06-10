@@ -10,23 +10,15 @@ html, body {
     font-family: 'Inter', 'sans-sarif';
 }
 
-body {
+main {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 550px;
-    height: 779px;
-    box-shadow: 0 0 25px 5px grey;
-    background-color: #121212;
+    background-color: #0e0e0e;
+
 }
 
 header {
@@ -97,10 +89,12 @@ h1, h3, p {
 
 .search-bar-container {
     position: absolute;
-    top: 24.3%;
-    left: 8%;
-    height: 38px;
-    width: 462px;
+    top: 188px;
+    left: 25%;
+    min-height: 38px;
+    height: 5vh;
+    max-height: 54px;
+    width: 50%;
 }
 
 form {
@@ -156,13 +150,14 @@ form > button:active {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin: 0em 2em;
+    margin: 0em auto;
     overflow: scroll;
     color: white;
+    max-width: 800px;
 }
 
 .start-exploring {
-    width: 148px;
+    min-width: 148px;
     margin: auto;
 }
 
@@ -256,8 +251,8 @@ form > button:active {
 
 
 .poster-img {
-    width: 99px;
-    height: 147.41px;
+    max-width: 99px;
+    max-height: 147.41px;
 }
 
 
